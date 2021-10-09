@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Toggle Mode</title>
+    <link rel="stylesheet" href="/toggle/toggle1.css" />
+  </head>
+  <body>
+    <!-- Rounded switch -->
+    <label class="switch">
+      <input type="checkbox" id="check" />
+      <span class="slider round" id="dark"></span>
+    </label>
+    <div class="text1">
+    <h1 class="text" id="text">Click on the Toggle Button</h1>
+    <script>
+      var text = document.getElementById("text");
+      var check = document.getElementById("check");
+      check.addEventListener("click", function () {
+        if (this.checked) {
+          console.log("toggle is checked!!");
+          document.body.style.backgroundColor = "black";
+          text.style.color = "white";
+        } else {
+          console.log("toggle is unchecked!!");
+          text.style.color = "black";
+          document.body.style.backgroundColor = "white";
+        }
+      });
+    </script>
+  </body>
+</html>
